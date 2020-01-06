@@ -1,0 +1,72 @@
+[
+    
+        {
+            "id": 1002,
+            "name" : "Upper Body",
+            "date" : "January 31, 2020",
+            "exercises" : [
+                {
+                    "id" : 9,
+                    "name" : "lateral pulldown",
+                    "sets" : 4,
+                    "reps" : 12,
+                    "weight" : 30,
+                    "time" : 0.0,
+                    "timeUsed" : false
+
+                },
+                {
+                    "id" : 54,
+                    "name" : "bicep curl",
+                    "sets" : 4,
+                    "reps" : 12,
+                    "weight" : 30,
+                    "time" : 0.0,
+                    "timeUsed" : false
+
+
+                }
+                
+            ]
+        },
+        {
+            "id": 1001,
+            "name" : "Lower Body",
+            "date" : "January 18, 2020",
+            "exercises" : [
+                {
+                    "id" : 10,
+                    "name" : "lateral pulldown",
+                    "sets" : 4,
+                    "reps" : 12,
+                    "weight" : 30,
+                    "time" : 0.0,
+                    "timeUsed" : false
+
+
+                }
+                
+            ]
+        },
+        {
+            "id": 1003,
+            "name" : "Strength Lower Body",
+            "date" : "January 18, 2020",
+            "exercises" : [
+                {
+                    "id" : 11,
+                    "name" : "lateral pulldown",
+                    "sets" : 4,
+                    "reps" : 12,
+                    "weight" : 30,
+                    "time" : 0.0,
+                    "timeUsed" : false
+
+                }
+                
+            ]
+        }
+        
+    
+
+]
