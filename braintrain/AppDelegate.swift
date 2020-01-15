@@ -127,9 +127,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     } else  {
                         values = line.components(separatedBy: delimiter)
                     }
-
+                    if(values[1].count > 0){
+                        values[1].removeFirst()
+                    }
                     // Put the values into the tuple and add it to the items array
                     let item = (name: values[0], muscle: values[1])
+                    print(item)
                     items?.append(item)
                 }
             }

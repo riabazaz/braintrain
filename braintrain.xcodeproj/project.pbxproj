@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		101BCB0623C2774600FF2BEF /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101BCB0523C2774600FF2BEF /* Select.swift */; };
+		101BCB0623C2774600FF2BEF /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101BCB0523C2774600FF2BEF /* FilteredList.swift */; };
 		101BCB0823C296A800FF2BEF /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101BCB0723C296A800FF2BEF /* MuscleGroup.swift */; };
 		1042546823BBC3EE00F4C445 /* SmallWorkoutDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042546723BBC3EE00F4C445 /* SmallWorkoutDetail.swift */; };
 		1042546A23BBC48200F4C445 /* SmallExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042546923BBC48200F4C445 /* SmallExerciseRow.swift */; };
@@ -16,6 +16,7 @@
 		106F2A152387829000DBBB1E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F2A142387829000DBBB1E /* UserData.swift */; };
 		1091F99C23BACA6E00F969FC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1091F99A23BACA6E00F969FC /* CoreData.xcdatamodeld */; };
 		1091F99E23BACB5D00F969FC /* exercises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1091F99D23BACB5D00F969FC /* exercises.csv */; };
+		10946EAF23CC000E00515E17 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10946EAE23CC000E00515E17 /* Select.swift */; };
 		1098F38C2383870C004F6637 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098F38B2383870C004F6637 /* Summary.swift */; };
 		1098F38E23838E0F004F6637 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098F38D23838E0F004F6637 /* Profile.swift */; };
 		1098F39023838ED7004F6637 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098F38F23838ED7004F6637 /* Workout.swift */; };
@@ -45,7 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		101BCB0523C2774600FF2BEF /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
+		101BCB0523C2774600FF2BEF /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		101BCB0723C296A800FF2BEF /* MuscleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
 		1042546723BBC3EE00F4C445 /* SmallWorkoutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorkoutDetail.swift; sourceTree = "<group>"; };
 		1042546923BBC48200F4C445 /* SmallExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallExerciseRow.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		106F2A142387829000DBBB1E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1091F99B23BACA6E00F969FC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		1091F99D23BACB5D00F969FC /* exercises.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = exercises.csv; path = braintrain/Resources/exercises.csv; sourceTree = SOURCE_ROOT; };
+		10946EAE23CC000E00515E17 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
 		1098F38B2383870C004F6637 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		1098F38D23838E0F004F6637 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		1098F38F23838ED7004F6637 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -180,7 +182,8 @@
 				1098F39C23860916004F6637 /* WorkoutList.swift */,
 				10D0067123B3FE3000752432 /* WorkoutCalendar.swift */,
 				10B017AB23BD62790041DBF5 /* Log.swift */,
-				101BCB0523C2774600FF2BEF /* Select.swift */,
+				101BCB0523C2774600FF2BEF /* FilteredList.swift */,
+				10946EAE23CC000E00515E17 /* Select.swift */,
 				106C12A323BBD1B1005928D8 /* WorkoutDetail */,
 				106C12A223BBD192005928D8 /* SmallWorkoutDetail */,
 				1098F39423844D77004F6637 /* Models */,
@@ -295,7 +298,7 @@
 				1098F38C2383870C004F6637 /* Summary.swift in Sources */,
 				1091F99C23BACA6E00F969FC /* CoreData.xcdatamodeld in Sources */,
 				10D0067A23B3FFC200752432 /* RKManager.swift in Sources */,
-				101BCB0623C2774600FF2BEF /* Select.swift in Sources */,
+				101BCB0623C2774600FF2BEF /* FilteredList.swift in Sources */,
 				10D0067B23B3FFC200752432 /* RKColorSettings.swift in Sources */,
 				10D0067F23B3FFC200752432 /* RKCell.swift in Sources */,
 				101BCB0823C296A800FF2BEF /* MuscleGroup.swift in Sources */,
@@ -305,6 +308,7 @@
 				10CDED15237CE9FE0006420D /* CircleImage.swift in Sources */,
 				10D0068023B3FFC200752432 /* RKDate.swift in Sources */,
 				1098F39623844F05004F6637 /* Data.swift in Sources */,
+				10946EAF23CC000E00515E17 /* Select.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
