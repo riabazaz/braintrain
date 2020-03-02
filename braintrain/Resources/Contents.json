@@ -1,0 +1,60 @@
+[
+    {
+        "id": "3070b49d-45fb-4b61-b2cc-1b3ee75c4f67",
+        "name": "Ria Bazaz",
+        "workoutslogged": 43,
+        "workoutspredicted": 12,
+        "workouts" : [
+            {
+                "name" : "Upper Body",
+                "date" : "January 31, 2020",
+                "exercises" : [
+                    {
+                        "id" : "14bad97a-f701-42c0-be7e-0c89d2738962",
+                        "name" : "lateral pulldown",
+                        "sets" : 4,
+                        "reps" : 12,
+                        "weight" : 30,
+                        "time" : 0.0,
+                        "timeUsed" : false
+
+                    },
+                    {
+                        "id" : "f648efea-fbf5-4035-8a12-5efb2e01e3cb",
+                        "name" : "bicep curl",
+                        "sets" : 4,
+                        "reps" : 12,
+                        "weight" : 30,
+                        "time" : 0.0,
+                        "timeUsed" : false
+
+
+                    }
+                    
+                ]
+            },
+            {
+                "name" : "Lower Body",
+                "date" : "January 18, 2020",
+                "exercises" : [
+                    {
+                        "id" : "14bad97a-f701-42c0-be7e-0c89d2738962",
+                        "name" : "lateral pulldown",
+                        "sets" : 4,
+                        "reps" : 12,
+                        "weight" : 30,
+                        "time" : 0.0,
+                        "timeUsed" : false
+
+
+                    }
+                    
+                ]
+            }
+            
+        ]
+        
+        
+    }
+]
+

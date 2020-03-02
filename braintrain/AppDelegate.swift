@@ -8,12 +8,14 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+//    var ref: DatabaseReference!
+//
+//    ref = Database.database().reference()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let documentsDirectory = paths[0]
 //        print(documentsDirectory)
         preloadData()
+        FirebaseApp.configure()        
         return true
     }
 
@@ -66,6 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }()
 
     // MARK: - Core Data Saving support
+    
 
     func saveContext () {
         let context = self.persistentContainer.viewContext
@@ -132,7 +136,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                     // Put the values into the tuple and add it to the items array
                     let item = (name: values[0], muscle: values[1])
-                    print(item)
                     items?.append(item)
                 }
             }

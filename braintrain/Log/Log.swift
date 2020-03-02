@@ -16,6 +16,7 @@ struct LogView: View {
                               MuscleGroup(name: "calves"), MuscleGroup(name: "chest"), MuscleGroup(name: "forearms"), MuscleGroup(name: "glutes"), MuscleGroup(name: "hamstrings"), MuscleGroup(name: "lats"),
     MuscleGroup(name: "back"), MuscleGroup(name: "quads"), MuscleGroup(name: "shoulders"), MuscleGroup(name: "triceps")]
     @State  var selectedmuscles = [MuscleGroup]()
+    @State private var musclesselec = false
 //    @FetchRequest(entity: DatabaseExercise.entity(),
 //       sortDescriptors: [
 //           NSSortDescriptor(keyPath: \DatabaseExercise.muscle, ascending: true)
@@ -26,16 +27,7 @@ struct LogView: View {
 
     
     var body: some View {
-        
-        NavigationView {
-//            ScrollView {
-//                VStack {
-//                    ForEach(exercises, id: \.self) { exercise in
-//                           Text(exercise.name ?? "Unknown")
-//                    }
-//                }
-//            }
-            ScrollView{
+        ScrollView{
                 VStack {
 
                     Text("Select muscle groups trained")
@@ -53,7 +45,6 @@ struct LogView: View {
                             .background(self.buttonColor(muscle: muscle))
                             .cornerRadius(40)
                             .frame(minWidth: 400)
-//                            .cornerRadius(20)
 
                         }
                         .padding()
@@ -65,18 +56,17 @@ struct LogView: View {
                 .padding(.top, -30)
                 .navigationBarItems(trailing:
                     NavigationLink(destination:
-                    Select(selectedmuscles: selectedmuscles))
-//                        WorkoutCalendar())
-                    {
+                    Select(selectedmuscles: selectedmuscles), isActive: $musclesselec){
 
                         Text("Next")
                     }
                 )
             }
-        }
+        .navigationBarBackButtonHidden(false)
+
         
     }
-//    func hey(){
+//    func hey() -> Bin{
 //        var uniqueValues: [String] = []
 //        for item in exercises {
 //            if !uniqueValues.contains(item.muscle ?? "unknown") {
@@ -87,14 +77,20 @@ struct LogView: View {
 //            print(item)
 //        }
 //    }
+    
     func toggleSelected(muscle: MuscleGroup) {
         if(selectedmuscles.contains(muscle)){
             guard let index = selectedmuscles.firstIndex(of: muscle) else { return }
             self.selectedmuscles.remove(at: index)
 //            print(exercises)
+            if(selectedmuscles.count == 0){
+                musclesselec = false
+            }
+            
             return
         }
         self.selectedmuscles.append(muscle)
+        musclesselec = true
         
     }
     

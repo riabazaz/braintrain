@@ -16,8 +16,8 @@ struct CircleImage: View {
             .resizable()
             .frame(width:180, height: 180)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color("darkest"), lineWidth: 4).frame(width:180, height: 180))
-            .shadow(radius: 10)
+            .overlay(Circle().stroke(Color("Color-6"), lineWidth: 4).frame(width:180, height: 180))
+
         
             
 
@@ -26,6 +26,6 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage(image: Image("run"))
+        CircleImage(image: Image("healthy"))
     }
 }

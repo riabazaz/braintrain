@@ -12,7 +12,7 @@ struct WorkoutCalendar: View {
     @State var deselectedIsPresented = true
     @State var dateWasSelected = false
     @State var dateWasChanged = false
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var session: SessionStore
     
     
     var rkManager4 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
@@ -36,10 +36,14 @@ struct WorkoutCalendar: View {
                 }
                
 
-            }.onAppear(perform: startUp)
+            }
+            .navigationBarHidden(false)
+            .navigationBarBackButtonHidden(false)
+            .onAppear(perform: startUp)
 
             
         }
+
 
        
         
@@ -52,8 +56,8 @@ struct WorkoutCalendar: View {
     func displayWorkout() -> some View {
         print(dateWasSelected)
         print(dateWasChanged)
-        var current = [Workout]()
-        for workout in (self.userData.workouts) {
+        var current = [UserWorkout]()
+        for workout in (self.session.workouts) {
             if(rkManager4.selectedDate != getDateFromText(string: workout.date)){
                 current.append(workout)
             }
@@ -71,7 +75,8 @@ struct WorkoutCalendar: View {
         var current = Date()
         var max = getDateFromText(string: "October 12, 1966")
         var onDates = [min,max]
-        for workout in (self.userData.workouts) {
+        print(self.session.workouts)
+        for workout in (self.session.workouts) {
            current = getDateFromText(string: workout.date)
            if(current < min){
                min = current

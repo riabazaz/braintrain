@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct SmallWorkoutList: View {
-    var workouts : [Workout]
+    var workouts : [UserWorkout]
     
     var body: some View {
         ScrollView{
             VStack {
-                   ForEach(workouts) { workoutz in
+                ForEach(workouts) { workoutz in
                         
                         SmallWorkoutDetail(workout: workoutz)
                         
@@ -28,8 +28,8 @@ struct SmallWorkoutList: View {
     
 }
 
-struct SmallWorkoutList_Previews: PreviewProvider {
-    static var previews: some View {
-        SmallWorkoutList(workouts: workoutData)
-    }
-}
+//struct SmallWorkoutList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SmallWorkoutList(workouts: workoutData)
+//    }
+//}

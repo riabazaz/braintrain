@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct WorkoutDetail: View {
-    var workout : Workout
+    var workout : UserWorkout
     
     var body: some View {
         ZStack{
@@ -24,22 +24,31 @@ struct WorkoutDetail: View {
                    .font(.title)
                    .multilineTextAlignment(.center)
 
-                ForEach(workout.exercises) {
+                ForEach(workout.exercises as! [Exercise]) {
                                        exercises in
                     ExerciseRow(exercise: exercises)
 
-                    
-
                 }
             }
+
            
         }
+        .navigationBarTitle(Text("discipline"), displayMode: .inline)
+        .navigationBarHidden(false)
+        .navigationBarBackButtonHidden(false)
+
+
     }
+//    mutating func cast(){
+//        for exercise in workout.exercises{
+//            exercises.append(exercise as! Exercise)
+//        }
+//    }
 }
 
-struct WorkoutDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutDetail(workout: workoutData[0])
-//        .previewLayout(.fixed(width: 300, height: 70))
-    }
-}
+//struct WorkoutDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WorkoutDetail(workout: workoutData[0])
+////        .previewLayout(.fixed(width: 300, height: 70))
+//    }
+//}

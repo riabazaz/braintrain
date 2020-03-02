@@ -15,6 +15,8 @@ struct FilteredList<Content:View>: View {
     { fetchRequest.wrappedValue }
 //    let preds : nscom
     let content: (DatabaseExercise) -> Content
+    @State var searchTerm : String = ""
+
 //    @FetchRequest(entity: DatabaseExercise.entity(),
 //   sortDescriptors: [
 //       NSSortDescriptor(keyPath: \DatabaseExercise.name, ascending: true)
@@ -22,9 +24,27 @@ struct FilteredList<Content:View>: View {
 //    @Environment(\.managedObjectContext) var managedObjectContext
     
     var body : some View {
-        List(exercises, id: \.self) { exercise in
-            self.content(exercise)
+        VStack {
+            SearchBar(text: $searchTerm)
+            List(containsFilter(exercises: exercises, filter: self.searchTerm), id: \.self) { exercise in
+                self.content(exercise)
+            }
         }
+    }
+    func containsFilter(exercises: FetchedResults<DatabaseExercise>, filter : String) -> [DatabaseExercise] {
+        var filtered = [DatabaseExercise]()
+        if(filter == ""){
+            for exercise in exercises {
+                filtered.append(exercise)
+            }
+            return filtered
+        }
+        for exercise in exercises {
+            if(exercise.name?.localizedStandardContains(filter) ?? false){
+                filtered.append(exercise)
+            }
+        }
+        return filtered
     }
     
 
@@ -57,8 +77,8 @@ struct FilteredList<Content:View>: View {
         self.fetchRequest = FetchRequest<DatabaseExercise>(entity: DatabaseExercise.entity(),
            sortDescriptors: [NSSortDescriptor(keyPath: \DatabaseExercise.name, ascending: true)]
             , predicate: andPredicate)
-
         self.content = content
+
 
 
         

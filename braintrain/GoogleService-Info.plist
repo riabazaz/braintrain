@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>38172941672-m8nmuoqcsiacivvlh36veo99uvv01meh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.38172941672-m8nmuoqcsiacivvlh36veo99uvv01meh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC_9jCwMb_dNhQItCkrSFkRtwgUUcOVIDs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>38172941672</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>zazabair.braintrain</string>
+	<key>PROJECT_ID</key>
+	<string>braintrain-e35a5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>braintrain-e35a5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:38172941672:ios:c0ea78add76c30ac218add</string>
+	<key>DATABASE_URL</key>
+	<string>https://braintrain-e35a5.firebaseio.com</string>
+</dict>
+</plist>

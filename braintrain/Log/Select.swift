@@ -12,23 +12,28 @@ import SwiftUI
 
 struct Select: View {
     var selectedmuscles : [MuscleGroup]
-    
+    @State var selectedRows = Set<UUID>()
+
     var body: some View {
 
         ZStack{
-            Color("Color-1")
-            .edgesIgnoringSafeArea(.all)
+
             VStack {
                 Text("Add Exercises")
-                .font(.title)
-//            FilteredList(muscles: selectedmuscles) { (exercise: DatabaseExercise) in
-//                Text("\(exercise.name ?? "unknown")")
-//            }
+                .font(.largeTitle)
+                FilteredList(muscles: selectedmuscles) { (exercise: DatabaseExercise) in
+                    MultiSelectRow(exercise: exercise, selectedItems: self.$selectedRows)
+//                    Text("\(exercise.name ?? "unknown")")
+                }
+
+
             }
             
         }
 
     }
+    
+    
 }
 
 struct Select_Previews: PreviewProvider {

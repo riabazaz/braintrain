@@ -18,20 +18,22 @@ struct SmallExerciseRow: View {
             HStack {
                 VStack (alignment: .leading){
                     
-                    Text(self.exercise.name)
+                    Text(exercise.name)
                     .font(.headline)
                     .foregroundColor(.white)
                     HStack {
-                        Text("\(self.exercise.sets) sets | ")
+                        Text("\(exercise.sets) sets | ")
                            .foregroundColor(.white)
                            .font(.subheadline)
-                        if(!self.exercise.timeUsed){
+                        if(exercise.timeUsed){
                             Text("\(exercise.reps) reps")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
                                 .padding(.leading, -5)
                         }
+                            
                         else{
+                            
                             Text("\(exercise.time) seconds")
                             .foregroundColor(.white)
                             .font(.subheadline)
@@ -45,14 +47,14 @@ struct SmallExerciseRow: View {
             
             }.padding(.leading,30)
         }.frame(height: 60)
-
-    }
-}
-
-struct SmallExerciseRow_Previews: PreviewProvider {
-    static var previews: some View {
-        SmallExerciseRow(exercise: workoutData[0].exercises[0])
-//        .previewLayout(.fixed(width: 300, height: 70))
     }
     
 }
+
+//struct SmallExerciseRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SmallExerciseRow(exercise: workoutData[0].exercises[0])
+////        .previewLayout(.fixed(width: 300, height: 70))
+//    }
+//
+//}

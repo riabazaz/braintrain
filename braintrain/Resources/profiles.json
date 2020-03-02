@@ -1,11 +1,9 @@
 [
     {
-        "id": 1,
+        "id": "fc59cd0d-c12a-4cc9-83b0-70589f5eb866",
         "name": "Ria Bazaz",
         "workoutslogged": 43,
-        "workoutspredicted": 12,
-        "status" : "bronze"
-        
+        "workoutspredicted": 12
         
     }
 ]

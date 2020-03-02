@@ -35,3 +35,7 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+//func loadProf() -> Profile{
+//    
+//}

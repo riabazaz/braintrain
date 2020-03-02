@@ -14,3 +14,4 @@ final class UserData: ObservableObject {
     @Published var workouts = workoutData
     @Published var profile = profileData[0]
 }
+
